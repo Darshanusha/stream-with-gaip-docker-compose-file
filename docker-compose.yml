@@ -1,13 +1,15 @@
 version: "3.8"
 services: 
   backend:
-    image: darshanusha2/stream-api
+    image: darshanusha2/stream-gapi_backend
+    #build: ./api
     volumes: 
       - data:/app
     ports: 
-      - 3001:3000
+      - 9000:9000
   frontend:
-    image: darshanusha2/stream-with-google-auth
+    image: darshanusha2/stream-gapi_frontend
+    #build: ./StreamWithGoogleOAuth
     ports: 
       - 3000:3000
     stdin_open: true
